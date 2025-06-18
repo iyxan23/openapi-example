@@ -70,14 +70,12 @@ class PostsScreen extends ConsumerWidget {
                     IconButton(
                       icon: const Icon(Icons.edit),
                       onPressed: () {
-                        // TODO: Implement edit post
                         _showEditPostDialog(context, ref, post);
                       },
                     ),
                     IconButton(
                       icon: const Icon(Icons.delete),
                       onPressed: () async {
-                        // TODO: Implement delete post
                         final confirmed = await _showDeleteConfirmationDialog(context);
                         if (confirmed == true && post.id != null) {
                           try {
@@ -105,7 +103,6 @@ class PostsScreen extends ConsumerWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // TODO: Implement add post
           _showAddPostDialog(context, ref);
         },
         tooltip: 'Add Post',

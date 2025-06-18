@@ -16,7 +16,7 @@ class PostService {
     final dio = Dio();
     // dio.options.baseUrl = 'http://10.0.2.2:9000'; // For Android emulator
     dio.options.baseUrl = 'http://localhost:9000'; // For iOS simulator or web/desktop
-    _api = post_api_client.DefaultApi(dio, post_api_client.serializers);
+    _api = post_api_client.DefaultApi(dio, post_api_client.standardSerializers);
   }
 
   Future<List<post_api_client.Post>> getPosts() async {
